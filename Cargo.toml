@@ -1,6 +1,9 @@
 [package]
 name = "armyknife"
+description = "A collection of useful command-line tools"
+license-file = "LICENSE.txt"
 version = "0.1.0"
 edition = "2024"
+repository = "https://github.com/jwoo0122/armyknife"
 
 [dependencies]
