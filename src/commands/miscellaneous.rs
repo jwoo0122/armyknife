@@ -1,4 +1,7 @@
 use crate::output::CommandResult;
+use std::env;
+
+const VERSION: &'static str = env!("CARGO_PKG_VERSION");
 
 pub fn help() -> CommandResult<String> {
     CommandResult {
@@ -10,7 +13,7 @@ pub fn help() -> CommandResult<String> {
 pub fn version() -> CommandResult<String> {
     CommandResult {
         status: true,
-        value: String::from("0.1.0"),
+        value: String::from(VERSION),
     }
 }
 
