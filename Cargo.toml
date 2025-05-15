@@ -7,3 +7,4 @@ edition = "2024"
 repository = "https://github.com/jwoo0122/armyknife"
 
 [dependencies]
+urlencoding = "2.1.3"

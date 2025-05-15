@@ -1,11 +1,16 @@
-pub fn help() {
-    println!("Ready-to-go toolbox")
-}
+use crate::output;
 
-pub fn version() {
-    println!("0.1.0")
-}
+mod miscellaneous;
+mod url;
 
-pub fn unknown() {
-    println!("Unknown command")
+pub fn handle_command(command: &str, args: &Vec<String>) -> output::CommandResult<String> {
+    let second_arg = &args[args.len() - 1];
+
+    match command {
+        "urlenc" => url::urlenc(second_arg),
+        "urldec" => url::urldec(second_arg),
+        "help" => miscellaneous::help(),
+        "version" => miscellaneous::version(),
+        _ => miscellaneous::unknown(),
+    }
 }
