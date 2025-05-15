@@ -3,7 +3,7 @@ use crate::output;
 mod miscellaneous;
 mod url;
 
-pub fn handle_command(command: &str, args: &Vec<String>) -> output::CommandResult<String> {
+pub fn handle_command(command: &str, args: &[String]) -> output::CommandResult<String> {
     let second_arg = &args[args.len() - 1];
 
     match command {
