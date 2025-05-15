@@ -1,7 +1,7 @@
 use crate::output::CommandResult;
 use std::env;
 
-const VERSION: &'static str = env!("CARGO_PKG_VERSION");
+const VERSION: &str = env!("CARGO_PKG_VERSION");
 
 pub fn help() -> CommandResult<String> {
     CommandResult {
